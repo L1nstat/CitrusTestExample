@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="API for storefronts">
+    <test name="All" preserve-order="true">
+        <classes>
+            <class name="ru.L1nstat.example.tests.ExampleTest"></class>
+        </classes>
+    </test>
+</suite>

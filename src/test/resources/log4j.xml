@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<!--
+   | For more configuration information and examples see the Jakarta Log4j
+   | owebsite: http://jakarta.apache.org/log4j
+ -->
+
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"/>
+        </layout>
+    </appender>
+
+    <logger name="com.consol.citrus.message.correlation.PollingCorrelationManager">
+        <level value="ERROR"/>
+        <appender-ref ref="console"></appender-ref>
+    </logger>
+
+    <logger name="org.springframework.ws.soap.server.SoapMessageDispatcher">
+        <level value="INFO"/>
+    </logger>
+    <logger name="com.consol.citrus.context.TestContextFactory">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="com.consol.citrus.ws.server.WebServiceEndpoint">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="com.consol.citrus.channel.ChannelSyncConsumer">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="com.consol.citrus.message.correlation.DefaultCorrelationManager">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.springframework.integration.http.support.DefaultHttpHeaderMapper">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.apache.http.impl.conn.ManagedHttpClientConnectionFactory">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.springframework.web.client.RestTemplate">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.apache.http.wire">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.apache.http.headers">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.apache.http.impl.execchain.MainClientExec">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.springframework.beans.factory.support.DefaultListableBeanFactory">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.springframework.web.context.support.StandardServletEnvironment">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="com.consol.citrus.variable.GlobalVariablesPropertyLoader">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.springframework.beans.factory.xml.PluggableSchemaResolver">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.springframework.core.env.StandardEnvironment">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="com.consol.citrus.TestCase">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.springframework.test.context.support.DependencyInjectionTestExecutionListener">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.springframework.ws.transport.http.WebServiceMessageReceiverHandlerAdapter">
+        <level value="ERROR"/>
+    </logger>
+
+
+    <root>
+        <level value="DEBUG"/>
+        <appender-ref ref="console"/>
+        <appender-ref ref="file"/>
+    </root>
+
+</log4j:configuration>
